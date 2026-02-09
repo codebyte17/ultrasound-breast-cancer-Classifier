@@ -80,6 +80,10 @@ target/
 
 # Dataset
 data/
+models/
+models/*
+
+
 # IPython
 profile_default/
 ipython_config.py

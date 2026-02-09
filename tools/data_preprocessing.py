@@ -16,11 +16,7 @@ for idx, (og_image, msk_image) in enumerate(zip(orignal_images_list, masked_imag
     try:
         # get class name
         class_name = og_image.parent.name
-        if class_name == "normal":
-            # Define the target path
-            # save_path = target_path / class_name / f"{class_name}_{idx}.png"
-            # shutil.copy2(str(og_image), str(save_path))
-            continue
+
 
         # read the orignal and masked images
         img = np.asarray(Image.open(og_image))
@@ -33,9 +29,11 @@ for idx, (og_image, msk_image) in enumerate(zip(orignal_images_list, masked_imag
         # Convert back to PIL Image
         output_image = Image.fromarray(overlay)
 
-        # Save
+        print(output_image.size)
         # Define the target path
         save_path = target_path / class_name / f"{class_name}_{idx}.png"
+
+
         output_image.save(save_path)
 
     except Exception as e:

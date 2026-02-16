@@ -1,0 +1,10 @@
+
+dataset:
+  name: breast_ultrasound
+  kaggle_path : aryashah2k/breast-ultrasound-images-dataset
+  raw_data_dir : ./data/raw/breast_ultrasound
+  raw_data_dir_full : ./data/raw/breast_ultrasound/Dataset_BUSI_with_GT/
+  processed_data_dir : ./data/proccessed/Overlay_dataset/
+
+
+

@@ -1,4 +1,4 @@
-from dataset import CustomDataset
+from .dataset import CustomDataset
 from torch.utils.data import DataLoader
 from PIL import Image
 import pandas as pd
@@ -21,11 +21,6 @@ def data_loader():
 
     x_test = test_dataset.iloc[:, 0].tolist()    # file paths as list of strings
     y_test = test_dataset.iloc[:, -1].values     # labels as numpy array
-
-    # Optional: check shapes and samples
-
-    print("First X_train sample:", x_train[0])
-    print("First y_train sample:", y_train[0])
 
 
     x_train_dataset = CustomDataset(x_train,y_train)

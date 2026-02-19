@@ -24,13 +24,23 @@ This repository contains a deep learning project for **classifying breast cancer
 
 ## Project Overview
 
-Breast cancer is one of the leading causes of cancer-related deaths in women. Ultrasound imaging provides a non-invasive method to detect breast abnormalities. This project focuses on building a **deep learning classifier** for ultrasound images to help in early detection.
+# Ultrasound Breast Cancer Classification
 
-**Objectives:**
-- Preprocess ultrasound breast images for deep learning.
-- Build a CNN-based model for binary classification (Benign vs Malignant).
-- Evaluate model performance using standard metrics.
-- Provide visualization of model predictions.
+This project investigates automated breast cancer classification from ultrasound images using deep learning. 
+Multiple convolutional neural network (CNN) architectures are implemented and compared, including:
+
+- A custom CNN trained from scratch
+- Transfer learning models based on AlexNet and ResNet50
+- A hyperparameter-optimized CNN using Optuna
+- Experiments with original ultrasound images and masked / overlay data
+
+The objective is to evaluate how different model architectures, training strategies, and data representations affect 
+classification performance on a three-class problem:
+**Benign, Malignant, and Normal**.
+
+The project follows a systematic experimental pipeline:
+data preprocessing → model training → evaluation → comparison across experiments.
+
 
 ---
 
